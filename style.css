@@ -1,0 +1,177 @@
+*, ::after, :hover{
+     box-sizing: border-box;
+     padding: 0;
+     margin: 0;
+     font-family: 'Poppins', sans-serif;
+
+
+}
+html, body, .app{
+     margin: 0;
+     padding: 0;
+     height: 100%;
+     width: 100%;
+     font-size: 20px;
+     font-weight: 800;
+     background-color: var(--Light);
+     color: var(--Dark);
+
+ }
+ body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+ }
+
+.app{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+
+     width: 80%;
+}
+.game {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: repeat(3, 1fr);
+     grid-column-gap: 0px;
+     grid-row-gap: 0px;
+     user-select: none;
+
+
+
+}
+.title-container {
+     width: 50%;
+     padding: 15px 0 15px 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     border: 5px solid var(--LightDark);
+     border-radius: 15px;
+     text-align: center;
+}
+.cube {
+     border: solid;
+     border-color: var(--DarkLight);
+
+     width: 200px;
+     height: 200px;
+
+     text-align: center;
+     font-size: 125px;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+}
+
+#cube1, #cube3, #cube2{
+     border-top: 0;
+}
+#cube2{
+}
+#cube1, #cube4, #cube7 {
+     border-left: 0;
+}
+#cube3, #cube6, #cube9 {
+     border-right: 0;
+}
+
+#cube7, #cube8, #cube9{
+     border-bottom: 0;
+}
+
+
+.end-screen-container{
+     width: 100vw;
+     height: 100vh;
+     position: fixed;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+
+     background-color: rgba(0, 0, 0, 0.5);
+     z-index: 3;
+}
+
+.end-screen{
+     width: 40%;
+     height: 50%;
+     background-color: var(--Light);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-evenly;
+     border-radius: 10px;
+     position: relative;
+     text-align: center;
+}
+
+.restart-button{
+     border: 3px solid var(--DarkLight);
+     border-radius: 10px;
+     width: 75%;
+     cursor: pointer;
+     transition: transform ease 0.3s;
+     user-select: none;
+
+}
+.restart-button:hover{
+     transform: scale(1.2);
+}
+
+.current-player-container{
+     font-size: 30px;
+}
+span.player{
+     font-weight: 800;
+     color: var(--DarkLight);
+}
+
+span.cross{
+     color: var(--DarkLight);
+	 font-weight: 800;
+}
+span.round{
+     color: var(--LightDark);
+	      font-weight: 800;
+}
+
+
+/******************THEME BUTTON STYLE********************/
+
+.theme-button{
+width: 50px;
+height: 50px;
+border-radius: 100%;
+position: fixed;
+left: 0;
+top: 0;
+     border: 5px solid var(--DarkLight);
+	 background-color: var(--LightDark);
+	 color: var(--Dark);
+      cursor: pointer;
+      user-select: none;
+}
+
+
+@media screen and (max-width: 600px)
+{
+     body{
+          font-size: 12px;
+     }
+     .cube{
+          width: 33vw;
+          height: 33vw;
+          font-size: 125px;
+     }
+}
